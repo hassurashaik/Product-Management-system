@@ -11,7 +11,7 @@ body {
 }
 
 .form {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(55px);
 
   border-radius: 20px;
@@ -39,6 +39,23 @@ body {
   transform: translateY(-3px);
   background: #1b5edb;
 }
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 80px;  /* adjust size */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
 
 @media screen and (max-width: 768px) {
   .btn {

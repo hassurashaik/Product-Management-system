@@ -10,6 +10,18 @@
   gap: 170px;
   flex-wrap: wrap;
 }
+/* Logo styles */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  width: 80px;   /* adjust size */
+  height: auto;
+}
+
 
 .hero-content {
   max-width: 500px;

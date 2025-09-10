@@ -16,6 +16,23 @@ body {
   color: #fff;
   overflow: hidden;
 }
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
 
 .container {
   display: flex;

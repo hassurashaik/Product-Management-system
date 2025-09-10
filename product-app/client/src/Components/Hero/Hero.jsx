@@ -2,14 +2,23 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import RotatingCircle from "./RotatingCircle";
 import "./Hero.css";
+import logo from "../../assets/p.png";
+
+
 const Hero = () => {
   const navigate = useNavigate();
 
-  const handleAddProduct = () => navigate("/add-product");
-  const handleViewProducts = () => navigate("/products");
+  const handleLogoClick = () => {
+    navigate("/"); // redirect to home
+  };
 
   return (
     <div className="hero-container">
+      {/* 🔹 Logo top-left */}
+      <div className="logo-container" onClick={handleLogoClick}>
+        <img src={logo} alt="Logo" className="logo" />
+      </div>
+
       <div className="hero-content">
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
@@ -34,10 +43,10 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          <button onClick={handleAddProduct} className="primary-button">
+          <button onClick={() => navigate("/add-product")} className="primary-button">
             Add Product
           </button>
-          <button onClick={handleViewProducts} className="secondary-button">
+          <button onClick={() => navigate("/products")} className="secondary-button">
             View Products
           </button>
         </motion.div>
